@@ -8,6 +8,9 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
+import { AddDestinationComponent } from '../app/toury/add-destination/add-destination.component'
+import { EditDestinationComponent } from '../app/toury/edit-destination/edit-destination.component'
+import { RemoveDestinationComponent } from '../app/toury/remove-destination/remove-destination.component'
 
 export const routes: Routes = [
   {
@@ -44,12 +47,37 @@ export const routes: Routes = [
     }
   },
   {
+    path: 'add-destination',
+    component: AddDestinationComponent,
+    data: {
+      title: 'Add Destination'
+    }
+  },
+  {
+    path: 'edit-destination',
+    component: EditDestinationComponent,
+    data: {
+      title: 'Edit Destination'
+    }
+  },
+  {
+    path: 'remove-destination',
+    component: RemoveDestinationComponent,
+    data: {
+      title: 'Remove Destination'
+    }
+  },
+  {
     path: '',
     component: DefaultLayoutComponent,
     data: {
       title: 'Home'
     },
     children: [
+      {
+        path: 'base',
+        loadChildren: './toury/'
+      },
       {
         path: 'base',
         loadChildren: './views/base/base.module#BaseModule'
@@ -87,7 +115,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [ RouterModule.forRoot(routes) ],
-  exports: [ RouterModule ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
