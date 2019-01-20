@@ -39,6 +39,9 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
+import { AddDestinationComponent } from './toury/add-destination/add-destination.component';
+import { EditDestinationComponent } from './toury/edit-destination/edit-destination.component';
+import { RemoveDestinationComponent } from './toury/remove-destination/remove-destination.component';
 
 @NgModule({
   imports: [
@@ -60,12 +63,15 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
     P404Component,
     P500Component,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    AddDestinationComponent,
+    EditDestinationComponent,
+    RemoveDestinationComponent,
   ],
   providers: [{
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   }],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
