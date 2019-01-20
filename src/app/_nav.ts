@@ -22,18 +22,23 @@ export const navItems: NavData[] = [
     }
   },
   {
-    name: 'Test1',
+    name: 'Destinations',
     url: '/dashboard',
     icon: 'icon-speedometer',
     children: [
       {
-        name: 'Child1',
-        url: '/base/cards',
+        name: 'Add Destination',
+        url: '/add-destination',
         icon: 'icon-puzzle'
       },
       {
-        name: 'Child2',
-        url: '/base/cards',
+        name: 'Edit Destination',
+        url: '/edit-destination',
+        icon: 'icon-puzzle'
+      },
+      {
+        name: 'Remove Destination',
+        url: '/remove-destination',
         icon: 'icon-puzzle'
       }
     ],
