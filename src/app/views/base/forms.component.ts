@@ -7,8 +7,8 @@ export class FormsComponent {
 
   constructor() { }
 
-  isCollapsed: boolean = false;
-  iconCollapse: string = 'icon-arrow-up';
+  isCollapsed = false;
+  iconCollapse = 'icon-arrow-up';
 
   collapsed(event: any): void {
     // console.log(event);
