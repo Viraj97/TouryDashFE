@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SampleService } from '../../sample.service';
 
 @Component({
   selector: 'app-add-destination',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddDestinationComponent implements OnInit {
 
-  constructor() { }
+  constructor(public sample: SampleService) { }
 
   ngOnInit() {
+    this.method1();
   }
 
+  method1() {
+    this.sample.getData().subscribe((data: {}) => {
+      console.log('123', data);
+    });
+  }
 }
