@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { SampleService } from '../../sample.service';
+import { DestinationService } from '../service/destination.service';
 
 @Component({
   selector: 'app-add-destination',
@@ -8,15 +8,17 @@ import { SampleService } from '../../sample.service';
 })
 export class AddDestinationComponent implements OnInit {
 
-  constructor(public sample: SampleService) { }
+  constructor(private destinationService: DestinationService) { }
 
   ngOnInit() {
-    this.method1();
+    this.getDestinations(0, 10);
   }
 
-  method1() {
-    this.sample.getData().subscribe((data: {}) => {
-      console.log('123', data);
+  getDestinations(startIndex: number, endIndex: number) {
+    this.destinationService.getDestinations(startIndex, endIndex).subscribe(element => {
+      element.forEach(destination => {
+        console.log(destination);
+      })
     });
   }
 }
