@@ -8,9 +8,9 @@ import { P404Component } from './views/error/404.component';
 import { P500Component } from './views/error/500.component';
 import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
-import { AddDestinationComponent } from './toury/add-destination/add-destination.component'
-import { EditDestinationComponent } from './toury/edit-destination/edit-destination.component'
-import { RemoveDestinationComponent } from './toury/remove-destination/remove-destination.component'
+import { AddDestinationComponent } from './toury/destinations/add-destination/add-destination.component';
+import { EditDestinationComponent } from './toury/destinations/edit-destination/edit-destination.component';
+import { RemoveDestinationComponent } from './toury/destinations/remove-destination/remove-destination.component';
 
 export const routes: Routes = [
   {

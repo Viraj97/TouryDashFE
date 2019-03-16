@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
+import { HttpModule } from '@angular/http';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
@@ -40,9 +40,9 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts/ng2-charts';
-import { AddDestinationComponent } from './toury/add-destination/add-destination.component';
-import { EditDestinationComponent } from './toury/edit-destination/edit-destination.component';
-import { RemoveDestinationComponent } from './toury/remove-destination/remove-destination.component';
+import { AddDestinationComponent } from './toury/destinations/add-destination/add-destination.component';
+import { EditDestinationComponent } from './toury/destinations/edit-destination/edit-destination.component';
+import { RemoveDestinationComponent } from './toury/destinations/remove-destination/remove-destination.component';
 
 @NgModule({
   imports: [
@@ -57,7 +57,7 @@ import { RemoveDestinationComponent } from './toury/remove-destination/remove-de
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
     ChartsModule,
-    HttpClientModule
+    HttpModule,
   ],
   declarations: [
     AppComponent,
