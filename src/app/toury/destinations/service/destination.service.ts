@@ -9,7 +9,7 @@ import 'rxjs/add/operator/map';
 export class DestinationService {
 
   constructor(private httpClient: Http) { }
- 
+
   getDestinations(startIndex: number, endIndex: number) {
     return this.httpClient.get('http://localhost:8080/destinations', {
       params: {

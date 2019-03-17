@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DestinationService } from '../service/destination.service';
+import { navItems } from '../../../_nav';
+import { CommonService } from '../../common/services/common.service';
 
 @Component({
   selector: 'app-add-destination',
@@ -7,11 +9,12 @@ import { DestinationService } from '../service/destination.service';
   styleUrls: ['./add-destination.component.scss']
 })
 export class AddDestinationComponent implements OnInit {
-
-  constructor(private destinationService: DestinationService) { }
+  public navItems = navItems;
+  constructor(private destinationService: DestinationService, private commonService: CommonService) { }
 
   ngOnInit() {
     this.getDestinations(0, 10);
+    this.getCountryList();
   }
 
   getDestinations(startIndex: number, endIndex: number) {
@@ -19,6 +22,15 @@ export class AddDestinationComponent implements OnInit {
       element.forEach(destination => {
         console.log(destination);
       })
+    });
+  }
+
+  getCountryList() {
+    let countryArray = [];
+    this.commonService.getCountryList().subscribe(responseData => {
+      responseData.forEach(countryObject => {
+        countryArray.push(countryObject)
+      });
     });
   }
 }
