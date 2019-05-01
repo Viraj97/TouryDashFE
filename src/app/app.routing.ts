@@ -11,6 +11,7 @@ import { RegisterComponent } from './views/register/register.component';
 import { AddDestinationComponent } from './toury/destinations/add-destination/add-destination.component';
 import { EditDestinationComponent } from './toury/destinations/edit-destination/edit-destination.component';
 import { RemoveDestinationComponent } from './toury/destinations/remove-destination/remove-destination.component';
+import { ViewDestinationsComponent } from './toury/destinations/view-destinations/view-destinations.component';
 
 export const routes: Routes = [
   {
@@ -44,6 +45,13 @@ export const routes: Routes = [
     component: RegisterComponent,
     data: {
       title: 'Register Page'
+    }
+  },
+  {
+    path: 'view-destinations',
+    component: ViewDestinationsComponent,
+    data: {
+      title: 'View Destination'
     }
   },
   {

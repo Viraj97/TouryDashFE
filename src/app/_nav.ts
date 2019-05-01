@@ -27,6 +27,11 @@ export const navItems: NavData[] = [
     icon: 'icon-speedometer',
     children: [
       {
+        name: 'View Destinations',
+        url: '/view-destinations',
+        icon: 'icon-puzzle'
+      },
+      {
         name: 'Add Destination',
         url: '/add-destination',
         icon: 'icon-puzzle'

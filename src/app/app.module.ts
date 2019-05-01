@@ -43,6 +43,7 @@ import { ChartsModule } from 'ng2-charts/ng2-charts';
 import { AddDestinationComponent } from './toury/destinations/add-destination/add-destination.component';
 import { EditDestinationComponent } from './toury/destinations/edit-destination/edit-destination.component';
 import { RemoveDestinationComponent } from './toury/destinations/remove-destination/remove-destination.component';
+import { ViewDestinationsComponent } from './toury/destinations/view-destinations/view-destinations.component';
 
 @NgModule({
   imports: [
@@ -69,6 +70,7 @@ import { RemoveDestinationComponent } from './toury/destinations/remove-destinat
     AddDestinationComponent,
     EditDestinationComponent,
     RemoveDestinationComponent,
+    ViewDestinationsComponent,
   ],
   providers: [{
     provide: LocationStrategy,

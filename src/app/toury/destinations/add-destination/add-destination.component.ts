@@ -13,16 +13,7 @@ export class AddDestinationComponent implements OnInit {
   constructor(private destinationService: DestinationService, private commonService: CommonService) { }
 
   ngOnInit() {
-    this.getDestinations(0, 10);
     this.getCountryList();
-  }
-
-  getDestinations(startIndex: number, endIndex: number) {
-    this.destinationService.getDestinations(startIndex, endIndex).subscribe(element => {
-      element.forEach(destination => {
-        console.log(destination);
-      })
-    });
   }
 
   getCountryList() {
