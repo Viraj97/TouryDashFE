@@ -56,8 +56,11 @@
     <app-sidebar-nav [navItems]="navItems" [perfectScrollbar] [disabled]="sidebarMinimized"></app-sidebar-nav>
     <app-sidebar-minimizer></app-sidebar-minimizer>
   </app-sidebar>
+  
+  
   <!-- Main content -->
   <main class="main">
+    
     <!-- Breadcrumb -->
     <ol class="breadcrumb">
       <app-breadcrumb></app-breadcrumb>
@@ -70,84 +73,79 @@
         </div>
       </li>
     </ol>
+    
     <div class="container-fluid">
       <router-outlet></router-outlet>
-
-
-
       <div class="animated fadeIn">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-12">
             <div class="card">
               <div class="card-header">
                 <strong>Add Destination</strong>
-      
+
               </div>
               <div class="card-body">
                 <div class="row">
                   <div class="col-sm-12">
                     <div class="form-group">
                       <label for="name">Name of the destination</label>
-                      <input type="text" class="form-control" id="name" placeholder="Enter name">
+                      <input type="text" class="form-control" id="name" placeholder="Destination name">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="name">Description</label>
+                      <textarea class="form-control" id="name" placeholder="Destination name"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="ccmonth">Province / State</label>
+                      <input type="text" class="form-control" id="name" placeholder="Province / State">
+                    </div>
+                    <div class="form-group">
+                      <label for="ccyear">District / Region </label>
+                      <input type="text" class="form-control" id="name" placeholder="Distrinct / Region (Optional)">
+                    </div>
+                    <div class="form-group">
+                      <label for="cvv">City / Area</label>
+                      <input type="text" class="form-control" id="cvv" placeholder="City / Area">
+                    </div>
+
+                    <div class="form-group">
+                      <label for="destType">Destination Type</label>
+                      <select class="form-control" id="destType">
+                      </select>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="switch switch-3d switch-success">
+                        <label for="cvv">Active</label>
+                        <input type="checkbox" class="switch-input" checked>
+                        <span class="switch-slider"></span>
+                      </label>
                     </div>
                   </div>
+
                 </div>
                 <!--/.row-->
+              </div>
+
+              <div class="card-footer">
+                <button type="submit" class="btn btn-md btn-primary">
+                  <i class="fa fa-dot-circle-o"></i>
+                  Submit</button>
+                <button type="reset" class="btn btn-md btn-danger">
+                  <i class="fa fa-ban"></i>
+                  Reset</button>
               </div>
             </div>
           </div>
         </div>
-      
-        <div class="row">
-          <div class="form-group col-sm-4">
-            <label for="ccmonth">Province</label>
-            <select class="form-control" id="ccmonth">
-              <option>Western</option>
-              <option>South</option>
-              <option>East</option>
-              <option>North</option>
-              <option>North Western</option>
-              <option>Central</option>
-              <option>North Central</option>
-              <option>Sabragamuwa</option>
-              <option>Uva</option>
-            </select>
-          </div>
-          <div class="form-group col-sm-4">
-            <label for="ccyear">District</label>
-            <select class="form-control" id="ccyear">
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-              <option>dis1</option>
-            </select>
-          </div>
-          <div class="col-sm-4">
-            <div class="form-group">
-              <label for="cvv">Area</label>
-              <input type="text" class="form-control" id="cvv" placeholder="Area">
-            </div>
-          </div>
-        </div>
-        <!--/.row-->
-        <div class="form-actions">
-          <button type="submit" class="btn btn-primary">Save changes</button>
-          <button class="btn btn-secondary" type="button">Cancel</button>
-        </div>
+
       </div>
-
-
-
     </div><!-- /.container-fluid -->
   </main>
+  
+  
   <app-aside [fixed]="true" [display]="false">
     <tabset>
       <tab>

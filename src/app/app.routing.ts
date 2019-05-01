@@ -76,10 +76,6 @@ export const routes: Routes = [
     children: [
       {
         path: 'base',
-        loadChildren: './toury/'
-      },
-      {
-        path: 'base',
         loadChildren: './views/base/base.module#BaseModule'
       },
       {
